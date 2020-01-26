@@ -39,7 +39,7 @@ setup(
     version=__version__,
     author='Divio AG',
     author_email='info@divio.ch',
-    url='https://github.com/aldryn/aldryn-bootstrap3',
+    url='https://github.com/ketaro/aldryn-bootstrap3',
     license='BSD',
     description=('Adds Bootstrap 3 components as plugins.'),
     long_description=open('README.rst').read(),
