@@ -8,7 +8,7 @@ from functools import partial
 
 import django.forms.models
 from django.db import models
-from django.utils.encoding import python_2_unicode_compatible
+from six import python_2_unicode_compatible
 from django.utils.html import strip_tags
 from django.utils.translation import ugettext, ugettext_lazy as _, ungettext
 
