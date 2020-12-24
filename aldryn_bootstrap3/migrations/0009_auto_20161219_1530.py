@@ -487,7 +487,8 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='bootstrap3carouselslidefolderplugin',
             name='folder',
-            field=filer.fields.folder.FilerFolderField(verbose_name='Folder', to='filer.Folder'),
+            field=filer.fields.folder.FilerFolderField(verbose_name='Folder',
+to='filer.Folder', on_delete=django.db.models.deletion.SET_NULL),
         ),
         migrations.AlterField(
             model_name='bootstrap3carouselslideplugin',

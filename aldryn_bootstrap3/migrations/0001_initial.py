@@ -233,7 +233,8 @@ class Migration(migrations.Migration):
             fields=[
                 ('cmsplugin_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='cms.CMSPlugin', on_delete=models.CASCADE)),
                 ('classes', aldryn_bootstrap3.model_fields.Classes(default='', help_text='space separated classes that are added to the class. see <a href="http://getbootstrap.com/css/" target="_blank">bootstrap docs</a>', blank=True)),
-                ('folder', filer.fields.folder.FilerFolderField(verbose_name='folder', to='filer.Folder')),
+                ('folder',
+                    filer.fields.folder.FilerFolderField(verbose_name='folder', to='filer.Folder', on_delete=django.db.models.deletion.SET_NULL)),
             ],
             options={
                 'abstract': False,
