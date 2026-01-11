@@ -4,7 +4,7 @@ from __future__ import unicode_literals, absolute_import
 import json
 import warnings
 
-from django.conf.urls import url
+from django.conf.urls import re_path
 from django.core.exceptions import ImproperlyConfigured
 from django.http import HttpResponse
 from django.templatetags.static import static
@@ -316,7 +316,7 @@ class Bootstrap3ImageCMSPlugin(CMSPluginBase):
 
     def get_plugin_urls(self):
         urlpatterns = [
-            url(
+            re_path(
                 r'^ajax_upload/(?P<pk>[0-9]+)/$',
                 self.ajax_upload,
                 name='bootstrap3_image_ajax_upload'
