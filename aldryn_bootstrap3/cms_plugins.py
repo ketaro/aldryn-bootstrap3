@@ -4,7 +4,7 @@ from __future__ import unicode_literals, absolute_import
 import json
 import warnings
 
-from django.conf.urls import re_path
+from django.urls import re_path
 from django.core.exceptions import ImproperlyConfigured
 from django.http import HttpResponse
 from django.templatetags.static import static
