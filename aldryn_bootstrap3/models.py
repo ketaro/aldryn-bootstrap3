@@ -10,7 +10,7 @@ import django.forms.models
 from django.db import models
 from six import python_2_unicode_compatible
 from django.utils.html import strip_tags
-from django.utils.translation import gettext, gettext_lazy as _, ungettext
+from django.utils.translation import gettext, gettext_lazy as _, ngettext
 
 import cms.models
 import cms.models.fields
@@ -67,7 +67,7 @@ class Bootstrap3RowPlugin(CMSPlugin):
             return ugettext('<empty>')
 
         column_count = len(self.child_plugin_instances or [])
-        column_count_str = ungettext(
+        column_count_str = ngettext(
             '1 column',
             '%(count)i columns',
             column_count
@@ -639,7 +639,7 @@ class Bootstrap3ListGroupPlugin(CMSPlugin):
             return ugettext('<empty>')
 
         column_count = len(self.child_plugin_instances or [])
-        column_count_str = ungettext(
+        column_count_str = ngettext(
             '1 item',
             '%(count)i items',
             column_count
@@ -921,7 +921,7 @@ class Bootstrap3AccordionPlugin(CMSPlugin):
             return ugettext('<empty>')
 
         column_count = len(self.child_plugin_instances or [])
-        column_count_str = ungettext(
+        column_count_str = ngettext(
             '1 item',
             '%(count)i items',
             column_count
