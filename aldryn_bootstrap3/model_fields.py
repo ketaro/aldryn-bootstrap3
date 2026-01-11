@@ -11,7 +11,7 @@ from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils.translation import gettext, gettext_lazy as _, ngettext
 
-from django.utils.encoding import force_text
+from django.utils.encoding import force_str
 
 import cms.models
 import cms.models.fields
@@ -228,7 +228,7 @@ class LinkMixin(models.Model):
             'link_file',
         )
 
-        anchor_field_verbose_name = force_text(
+        anchor_field_verbose_name = force_str(
            self._meta.get_field(anchor_field_name).verbose_name)
         anchor_field_value = getattr(self, anchor_field_name)
 
@@ -237,7 +237,7 @@ class LinkMixin(models.Model):
             for key in field_names
         }
         link_field_verbose_names = {
-            key: force_text(self._meta.get_field(key).verbose_name)
+            key: force_str(self._meta.get_field(key).verbose_name)
             for key in link_fields.keys()
         }
         provided_link_fields = {
