@@ -2,7 +2,7 @@
 from __future__ import unicode_literals, absolute_import
 
 import django.forms.fields
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .conf import settings
 from . import widgets, constants

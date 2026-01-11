@@ -8,7 +8,7 @@ from django.conf.urls import url
 from django.core.exceptions import ImproperlyConfigured
 from django.http import HttpResponse
 from django.templatetags.static import static
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from django.views.decorators.csrf import csrf_exempt
 
 from cms.models import CMSPlugin
