@@ -64,7 +64,7 @@ class Bootstrap3RowPlugin(CMSPlugin):
         instance = self.get_plugin_instance()[0]
 
         if not instance:
-            return ugettext('<empty>')
+            return gettext('<empty>')
 
         column_count = len(self.child_plugin_instances or [])
         column_count_str = ngettext(
@@ -636,7 +636,7 @@ class Bootstrap3ListGroupPlugin(CMSPlugin):
         instance = self.get_plugin_instance()[0]
 
         if not instance:
-            return ugettext('<empty>')
+            return gettext('<empty>')
 
         column_count = len(self.child_plugin_instances or [])
         column_count_str = ngettext(
@@ -918,7 +918,7 @@ class Bootstrap3AccordionPlugin(CMSPlugin):
         instance = self.get_plugin_instance()[0]
 
         if not instance:
-            return ugettext('<empty>')
+            return gettext('<empty>')
 
         column_count = len(self.child_plugin_instances or [])
         column_count_str = ngettext(

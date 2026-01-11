@@ -285,7 +285,7 @@ class LinkOrButton(django.db.models.fields.CharField, SouthMixinBase):
 
     def __init__(self, *args, **kwargs):
         if 'verbose_name' not in kwargs:
-            kwargs['verbose_name'] = ugettext('Type')
+            kwargs['verbose_name'] = gettext('Type')
         if 'max_length' not in kwargs:
             kwargs['max_length'] = 255
         if 'blank' not in kwargs:
@@ -316,7 +316,7 @@ class Context(django.db.models.fields.CharField):
 
     def __init__(self, *args, **kwargs):
         if 'verbose_name' not in kwargs:
-            kwargs['verbose_name'] = ugettext('Context')
+            kwargs['verbose_name'] = gettext('Context')
         if 'max_length' not in kwargs:
             kwargs['max_length'] = 255
         if 'blank' not in kwargs:
@@ -347,7 +347,7 @@ class Icon(django.db.models.CharField):
 
     def __init__(self, *args, **kwargs):
         if 'verbose_name' not in kwargs:
-            kwargs['verbose_name'] = ugettext('Icon')
+            kwargs['verbose_name'] = gettext('Icon')
         if 'max_length' not in kwargs:
             kwargs['max_length'] = 255
         if 'blank' not in kwargs:
@@ -388,7 +388,7 @@ class Responsive(MiniText):
 
     def __init__(self, *args, **kwargs):
         if 'verbose_name' not in kwargs:
-            kwargs['verbose_name'] = ugettext('Responsive')
+            kwargs['verbose_name'] = gettext('Responsive')
         if 'blank' not in kwargs:
             kwargs['blank'] = True
         if 'default' not in kwargs:
@@ -409,7 +409,7 @@ class Size(django.db.models.CharField, SouthMixinBase):
 
     def __init__(self, *args, **kwargs):
         if 'verbose_name' not in kwargs:
-            kwargs['verbose_name'] = ugettext('Context')
+            kwargs['verbose_name'] = gettext('Context')
         if 'max_length' not in kwargs:
             kwargs['max_length'] = 255
         if 'blank' not in kwargs:
